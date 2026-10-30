@@ -1,0 +1,225 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:parentTag="android.widget.LinearLayout"
+    tools:orientation="vertical"
+    tools:context=".EditorActivity">
+    <!-- Controls are listed in display order. Appearance belongs here; data and actions stay in Java. -->
+    <!-- Photo preview and photo actions -->
+
+    <ImageView
+        android:id="@+id/petPhotoPreview"
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginBottom="12dp"
+        android:scaleType="centerCrop"
+        android:background="@drawable/photo_mask"
+        android:clipToOutline="true"
+        android:contentDescription="@string/pet_photo_preview"
+        tools:src="@drawable/ic_paw" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/choosePetPhoto"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="12dp"
+        android:minHeight="52dp"
+        android:textAllCaps="false"
+        app:cornerRadius="12dp"
+        android:text="@string/label_choosePetPhoto" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/removePetPhoto"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="12dp"
+        android:minHeight="52dp"
+        android:textAllCaps="false"
+        app:cornerRadius="12dp"
+        android:text="@string/label_removePetPhoto" />
+    <!-- Name * -->
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/petNameField"
+        style="@style/Widget.PetCare.TextInputLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:hint="@string/label_petName">
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/petNameInput"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:minHeight="56dp"
+            android:inputType="textCapSentences"
+            android:maxLength="2000" />
+    </com.google.android.material.textfield.TextInputLayout>
+    <!-- Pet type: Java supplies the available options. -->
+
+    <TextView
+        android:id="@+id/petSpeciesLabel"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingStart="2dp"
+        android:paddingBottom="6dp"
+        android:text="@string/label_petSpecies"
+        android:textSize="14sp"
+        android:textColor="@color/muted" />
+
+    <Spinner
+        android:id="@+id/petSpeciesSpinner"
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:layout_marginBottom="16dp"
+        android:background="@drawable/spinner_bg"
+        android:paddingStart="14dp"
+        android:paddingEnd="40dp"
+        android:contentDescription="@string/label_petSpecies" />
+    <!-- Breed * -->
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/petBreedField"
+        style="@style/Widget.PetCare.TextInputLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:hint="@string/label_petBreed">
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/petBreedInput"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:minHeight="56dp"
+            android:inputType="textCapSentences"
+            android:maxLength="2000" />
+    </com.google.android.material.textfield.TextInputLayout>
+    <!-- Age in years * -->
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/petAgeField"
+        style="@style/Widget.PetCare.TextInputLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:hint="@string/label_petAge">
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/petAgeInput"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:minHeight="56dp"
+            android:inputType="numberDecimal"
+            android:maxLength="2000" />
+    </com.google.android.material.textfield.TextInputLayout>
+    <!-- Weight in kg * -->
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/petWeightField"
+        style="@style/Widget.PetCare.TextInputLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:hint="@string/label_petWeight">
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/petWeightInput"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:minHeight="56dp"
+            android:inputType="numberDecimal"
+            android:maxLength="2000" />
+    </com.google.android.material.textfield.TextInputLayout>
+    <!-- Gender: Java supplies the available options. -->
+
+    <TextView
+        android:id="@+id/petGenderLabel"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingStart="2dp"
+        android:paddingBottom="6dp"
+        android:text="@string/label_petGender"
+        android:textSize="14sp"
+        android:textColor="@color/muted" />
+
+    <Spinner
+        android:id="@+id/petGenderSpinner"
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:layout_marginBottom="16dp"
+        android:background="@drawable/spinner_bg"
+        android:paddingStart="14dp"
+        android:paddingEnd="40dp"
+        android:contentDescription="@string/label_petGender" />
+    <!-- Vaccinations and medical history -->
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/petMedicalField"
+        style="@style/Widget.PetCare.TextInputLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:hint="@string/label_petMedical">
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/petMedicalInput"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:minHeight="56dp"
+            android:inputType="textCapSentences|textMultiLine"
+            android:maxLength="2000"
+            android:minLines="3" />
+    </com.google.android.material.textfield.TextInputLayout>
+    <!-- Allergies -->
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/petAllergiesField"
+        style="@style/Widget.PetCare.TextInputLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:hint="@string/label_petAllergies">
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/petAllergiesInput"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:minHeight="56dp"
+            android:inputType="textCapSentences|textMultiLine"
+            android:maxLength="2000"
+            android:minLines="3" />
+    </com.google.android.material.textfield.TextInputLayout>
+    <!-- Dietary preferences -->
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/petDietField"
+        style="@style/Widget.PetCare.TextInputLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:hint="@string/label_petDiet">
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/petDietInput"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:minHeight="56dp"
+            android:inputType="textCapSentences|textMultiLine"
+            android:maxLength="2000"
+            android:minLines="3" />
+    </com.google.android.material.textfield.TextInputLayout>
+    <!-- Notes / favourite toys -->
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/petNotesField"
+        style="@style/Widget.PetCare.TextInputLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:hint="@string/label_petNotes">
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/petNotesInput"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:minHeight="56dp"
+            android:inputType="textCapSentences|textMultiLine"
+            android:maxLength="2000"
+            android:minLines="3" />
+    </com.google.android.material.textfield.TextInputLayout>
+</merge>

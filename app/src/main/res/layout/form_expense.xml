@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:parentTag="android.widget.LinearLayout"
+    tools:orientation="vertical"
+    tools:context=".EditorActivity">
+    <!-- Controls are listed in display order. Appearance belongs here; data and actions stay in Java. -->
+    <!-- Pet *: Java supplies the available options. -->
+
+    <TextView
+        android:id="@+id/expensePetLabel"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingStart="2dp"
+        android:paddingBottom="6dp"
+        android:text="@string/label_expensePet"
+        android:textSize="14sp"
+        android:textColor="@color/muted" />
+
+    <Spinner
+        android:id="@+id/expensePetSpinner"
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:layout_marginBottom="16dp"
+        android:background="@drawable/spinner_bg"
+        android:paddingStart="14dp"
+        android:paddingEnd="40dp"
+        android:contentDescription="@string/label_expensePet" />
+
+    <TextView
+        android:id="@+id/expensePetHint"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="8dp"
+        android:paddingBottom="16dp"
+        android:textSize="16sp"
+        android:textColor="@color/ink"
+        android:visibility="gone" />
+    <!-- Expense name * -->
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/expenseNameField"
+        style="@style/Widget.PetCare.TextInputLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:hint="@string/label_expenseName">
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/expenseNameInput"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:minHeight="56dp"
+            android:inputType="textCapSentences"
+            android:maxLength="2000" />
+    </com.google.android.material.textfield.TextInputLayout>
+    <!-- Category *: Java supplies the available options. -->
+
+    <TextView
+        android:id="@+id/expenseCategoryLabel"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingStart="2dp"
+        android:paddingBottom="6dp"
+        android:text="@string/label_expenseCategory"
+        android:textSize="14sp"
+        android:textColor="@color/muted" />
+
+    <Spinner
+        android:id="@+id/expenseCategorySpinner"
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:layout_marginBottom="16dp"
+        android:background="@drawable/spinner_bg"
+        android:paddingStart="14dp"
+        android:paddingEnd="40dp"
+        android:contentDescription="@string/label_expenseCategory" />
+    <!-- Amount * -->
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/expenseAmountField"
+        style="@style/Widget.PetCare.TextInputLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:hint="@string/label_expenseAmount">
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/expenseAmountInput"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:minHeight="56dp"
+            android:inputType="numberDecimal"
+            android:maxLength="2000" />
+    </com.google.android.material.textfield.TextInputLayout>
+    <!-- Date * -->
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/expenseDateField"
+        style="@style/Widget.PetCare.TextInputLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:hint="@string/label_expenseDate">
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/expenseDateInput"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:minHeight="56dp"
+            android:inputType="datetime"
+            android:maxLength="2000" />
+    </com.google.android.material.textfield.TextInputLayout>
+    <!-- Notes (optional) -->
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/expenseNotesField"
+        style="@style/Widget.PetCare.TextInputLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:hint="@string/label_expenseNotes">
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/expenseNotesInput"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:minHeight="56dp"
+            android:inputType="textCapSentences|textMultiLine"
+            android:maxLength="2000"
+            android:minLines="3" />
+    </com.google.android.material.textfield.TextInputLayout>
+</merge>

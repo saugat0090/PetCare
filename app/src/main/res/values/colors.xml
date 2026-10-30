@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="brand">#1D4636</color>
+    <color name="brand_deep">#153428</color>
+    <color name="brand_dark">#1D4636</color>
+    <color name="accent">#E8871E</color>
+    <color name="accent_soft">#FBE8CC</color>
+    <color name="link">#BD6200</color>
+    <color name="mint">#F1EEDF</color>
+    <color name="mint_strong">#E6E1CB</color>
+    <color name="background">#F6F5EC</color>
+    <color name="ink">#22302A</color>
+    <color name="muted">#66695F</color>
+    <color name="white">#FFFFFF</color>
+    <color name="border">#E9E3D0</color>
+    <color name="field_border">#E2D6B8</color>
+    <color name="danger">#D64545</color>
+    <color name="danger_bg">#FDECEC</color>
+    <color name="success">#2F7D4F</color>
+</resources>

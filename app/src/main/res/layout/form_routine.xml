@@ -1,0 +1,194 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:parentTag="android.widget.LinearLayout"
+    tools:orientation="vertical"
+    tools:context=".EditorActivity">
+    <!-- Controls are listed in display order. Appearance belongs here; data and actions stay in Java. -->
+    <!-- Routine name * -->
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/routineNameField"
+        style="@style/Widget.PetCare.TextInputLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:hint="@string/label_routineName">
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/routineNameInput"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:minHeight="56dp"
+            android:inputType="textCapSentences"
+            android:maxLength="2000" />
+    </com.google.android.material.textfield.TextInputLayout>
+    <!-- Pet: Java supplies the available options. -->
+
+    <TextView
+        android:id="@+id/routinePetLabel"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingStart="2dp"
+        android:paddingBottom="6dp"
+        android:text="@string/label_routinePet"
+        android:textSize="14sp"
+        android:textColor="@color/muted" />
+
+    <Spinner
+        android:id="@+id/routinePetSpinner"
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:layout_marginBottom="16dp"
+        android:background="@drawable/spinner_bg"
+        android:paddingStart="14dp"
+        android:paddingEnd="40dp"
+        android:contentDescription="@string/label_routinePet" />
+
+    <TextView
+        android:id="@+id/routinePetHint"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="8dp"
+        android:paddingBottom="16dp"
+        android:textSize="16sp"
+        android:textColor="@color/ink"
+        android:visibility="gone" />
+    <!-- Category: Java supplies the available options. -->
+
+    <TextView
+        android:id="@+id/routineCategoryLabel"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingStart="2dp"
+        android:paddingBottom="6dp"
+        android:text="@string/label_routineCategory"
+        android:textSize="14sp"
+        android:textColor="@color/muted" />
+
+    <Spinner
+        android:id="@+id/routineCategorySpinner"
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:layout_marginBottom="16dp"
+        android:background="@drawable/spinner_bg"
+        android:paddingStart="14dp"
+        android:paddingEnd="40dp"
+        android:contentDescription="@string/label_routineCategory" />
+    <!-- Repeat: Java supplies the available options. -->
+
+    <TextView
+        android:id="@+id/routineFrequencyLabel"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingStart="2dp"
+        android:paddingBottom="6dp"
+        android:text="@string/label_routineFrequency"
+        android:textSize="14sp"
+        android:textColor="@color/muted" />
+
+    <Spinner
+        android:id="@+id/routineFrequencySpinner"
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:layout_marginBottom="16dp"
+        android:background="@drawable/spinner_bg"
+        android:paddingStart="14dp"
+        android:paddingEnd="40dp"
+        android:contentDescription="@string/label_routineFrequency" />
+    <!-- Day of the week: Java supplies the available options. -->
+
+    <TextView
+        android:id="@+id/routineDayLabel"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingStart="2dp"
+        android:paddingBottom="6dp"
+        android:text="@string/label_routineDay"
+        android:textSize="14sp"
+        android:textColor="@color/muted" />
+
+    <Spinner
+        android:id="@+id/routineDaySpinner"
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:layout_marginBottom="16dp"
+        android:background="@drawable/spinner_bg"
+        android:paddingStart="14dp"
+        android:paddingEnd="40dp"
+        android:contentDescription="@string/label_routineDay" />
+    <!-- Time -->
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/routineTimeField"
+        style="@style/Widget.PetCare.TextInputLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:hint="@string/label_routineTime">
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/routineTimeInput"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:minHeight="56dp"
+            android:inputType="datetime"
+            android:maxLength="2000" />
+    </com.google.android.material.textfield.TextInputLayout>
+    <!-- Required supplies -->
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/routineSuppliesField"
+        style="@style/Widget.PetCare.TextInputLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:hint="@string/label_routineSupplies">
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/routineSuppliesInput"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:minHeight="56dp"
+            android:inputType="textCapSentences"
+            android:maxLength="2000" />
+    </com.google.android.material.textfield.TextInputLayout>
+    <!-- Location (optional): Java supplies the available options. -->
+
+    <TextView
+        android:id="@+id/routineLocationLabel"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingStart="2dp"
+        android:paddingBottom="6dp"
+        android:text="@string/label_routineLocation"
+        android:textSize="14sp"
+        android:textColor="@color/muted" />
+
+    <Spinner
+        android:id="@+id/routineLocationSpinner"
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:layout_marginBottom="16dp"
+        android:background="@drawable/spinner_bg"
+        android:paddingStart="14dp"
+        android:paddingEnd="40dp"
+        android:contentDescription="@string/label_routineLocation" />
+    <!-- Care instructions (optional) -->
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/routineNotesField"
+        style="@style/Widget.PetCare.TextInputLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:hint="@string/label_routineNotes">
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/routineNotesInput"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:minHeight="56dp"
+            android:inputType="textCapSentences|textMultiLine"
+            android:maxLength="2000"
+            android:minLines="3" />
+    </com.google.android.material.textfield.TextInputLayout>
+</merge>

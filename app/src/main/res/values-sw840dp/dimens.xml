@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="screen_padding_h">200dp</dimen>
+    <dimen name="auth_margin_h">280dp</dimen>
+    <dimen name="toolbar_inset_nav">188dp</dimen>
+</resources>

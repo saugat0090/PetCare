@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:parentTag="android.widget.LinearLayout"
+    tools:orientation="vertical"
+    tools:context=".EditorActivity">
+    <!-- Controls are listed in display order. Appearance belongs here; data and actions stay in Java. -->
+    <!-- Location name * -->
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/locationNameField"
+        style="@style/Widget.PetCare.TextInputLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:hint="@string/label_locationName">
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/locationNameInput"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:minHeight="56dp"
+            android:inputType="textCapSentences"
+            android:maxLength="2000" />
+    </com.google.android.material.textfield.TextInputLayout>
+    <!-- The live map is inserted into this host. Java adjusts its height to the phone. -->
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingStart="2dp"
+        android:paddingBottom="6dp"
+        android:text="@string/map_location_label"
+        android:textSize="14sp"
+        android:textColor="@color/muted" />
+
+    <FrameLayout
+        android:id="@+id/locationMapHost"
+        android:layout_width="match_parent"
+        android:layout_height="360dp"
+        android:layout_marginBottom="6dp"
+        tools:background="@color/mint" />
+
+    <TextView
+        android:id="@+id/locationMapCaption"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:gravity="center"
+        android:text="@string/map_location_hint"
+        android:textSize="13sp"
+        android:textColor="@color/muted" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/findNearby"
+        style="@style/Widget.Material3.Button.OutlinedButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="12dp"
+        android:minHeight="52dp"
+        android:textAllCaps="false"
+        android:textSize="16sp"
+        android:text="@string/find_nearby"
+        android:textColor="@color/brand_deep"
+        app:cornerRadius="10dp"
+        app:strokeColor="@color/brand_deep"
+        app:strokeWidth="1dp"
+        app:icon="@drawable/ic_place"
+        app:iconTint="@color/brand_deep"
+        app:iconGravity="textStart"
+        app:iconPadding="8dp" />
+</merge>

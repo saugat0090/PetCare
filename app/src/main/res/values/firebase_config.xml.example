@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Firebase project settings for com.example.assignmenttask (from the Firebase console). Firebase reads these at start-up. -->
+    <string name="gcm_defaultSenderId" translatable="false">YOUR_VALUE_HERE</string>
+    <string name="google_api_key" translatable="false">YOUR_VALUE_HERE</string>
+    <string name="google_app_id" translatable="false">YOUR_VALUE_HERE</string>
+    <string name="google_storage_bucket" translatable="false">YOUR_VALUE_HERE</string>
+    <string name="project_id" translatable="false">YOUR_VALUE_HERE</string>
+</resources>

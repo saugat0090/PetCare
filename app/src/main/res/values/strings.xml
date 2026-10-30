@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">PetCare</string>
+    <!-- Navigation labels -->
+    <string name="nav_home">Home</string>
+    <string name="nav_pets">Pets</string>
+    <string name="nav_routines">Routines</string>
+    <string name="nav_locations">Locations</string>
+    <string name="nav_more">More</string>
+    <!-- Routine name on the first line, pet and time on the second (used when choosing routines to delegate) -->
+    <string name="task_label">%1$s\n%2$s · %3$s</string>
+    <string name="default_time" translatable="false">08:00</string>
+</resources>

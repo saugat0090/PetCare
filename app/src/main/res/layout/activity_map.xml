@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".MapActivity"
+    android:id="@+id/root"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/white">
+    <com.google.android.material.appbar.MaterialToolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/white"
+        app:titleTextColor="@color/ink"
+        app:titleTextAppearance="@style/TextAppearance.PetCare.ToolbarTitle"
+        app:contentInsetStart="@dimen/screen_padding_h"
+        app:contentInsetStartWithNavigation="@dimen/toolbar_inset_nav"
+        app:titleMarginStart="0dp" />
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+        <FrameLayout
+            android:id="@+id/mapHost"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/myLocation"
+            style="@style/Widget.Material3.Button.TonalButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="top|end"
+            android:layout_margin="12dp"
+            android:minHeight="48dp"
+            android:textAllCaps="false"
+            android:text="My location"
+            android:contentDescription="Show my location on the map" />
+
+        <TextView
+            android:id="@+id/mapHint"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="top|start"
+            android:layout_marginTop="72dp"
+            android:layout_marginStart="@dimen/screen_padding_h"
+            android:layout_marginEnd="@dimen/screen_padding_h"
+            android:background="@drawable/card_background"
+            android:padding="12dp"
+            android:textColor="@color/ink"
+            android:textSize="14sp"
+            android:visibility="gone" />
+
+        <LinearLayout
+            android:id="@+id/panel"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:layout_margin="@dimen/screen_padding_h"
+            android:background="@drawable/card_background"
+            android:orientation="vertical"
+            android:padding="16dp"
+            android:visibility="gone">
+            <TextView
+                android:id="@+id/panelTitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/ink"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/panelBody"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:textColor="@color/muted"
+                android:textSize="14sp" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/panelDetails"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:textAllCaps="false"
+                app:cornerRadius="10dp"
+                android:text="Location details" />
+        </LinearLayout>
+    </FrameLayout>
+</LinearLayout>

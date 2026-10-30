@@ -1,0 +1,15 @@
+.gradle/
+.idea/
+local.properties
+**/build/
+*.iml
+.DS_Store
+
+# Private config (copy the .example file and fill in your own values)
+app/src/main/res/values/firebase_config.xml
+app/google-services.json
+*.jks
+*.keystore
+secrets.properties
+*.apk
+*.aab

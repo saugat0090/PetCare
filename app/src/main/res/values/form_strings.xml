@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Labels for the add/edit forms. -->
+    <string name="label_choosePetPhoto">Choose pet photo (optional)</string>
+    <string name="label_removePetPhoto">Remove photo</string>
+    <string name="label_petName">Name *</string>
+    <string name="label_petSpecies">Pet type</string>
+    <string name="label_petBreed">Breed *</string>
+    <string name="label_petAge">Age in years *</string>
+    <string name="label_petWeight">Weight in kg *</string>
+    <string name="label_petGender">Gender</string>
+    <string name="label_petMedical">Vaccinations and medical history</string>
+    <string name="label_petAllergies">Allergies</string>
+    <string name="label_petDiet">Dietary preferences</string>
+    <string name="label_petNotes">Notes / favourite toys</string>
+    <string name="label_routineName">Routine name *</string>
+    <string name="label_routinePet">Pet</string>
+    <string name="label_routineCategory">Category</string>
+    <string name="label_routineFrequency">Repeat</string>
+    <string name="label_routineDay">Day of the week</string>
+    <string name="label_routineTime">Time</string>
+    <string name="label_routineSupplies">Required supplies</string>
+    <string name="label_routineLocation">Location (optional)</string>
+    <string name="label_routineNotes">Care instructions (optional)</string>
+    <string name="label_expensePet">Pet *</string>
+    <string name="label_expenseName">Expense name *</string>
+    <string name="label_expenseCategory">Category *</string>
+    <string name="label_expenseAmount">Amount *</string>
+    <string name="label_expenseDate">Date *</string>
+    <string name="label_expenseNotes">Notes (optional)</string>
+    <string name="label_locationName">Location name *</string>
+    <string name="pet_photo_preview">Pet photo preview</string>
+    <string name="map_location_label">Map location *</string>
+    <string name="map_location_hint">Tap on the map to set the location</string>
+    <string name="find_nearby">Find nearby</string>
+</resources>
